@@ -8,8 +8,8 @@
 /* Fonts */
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0f172a; // dark default
-  color: #e5e7eb;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 /* Smooth scrolling */

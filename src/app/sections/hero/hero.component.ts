@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+  openGitHub(): void {
+    window.open('https://github.com/abinashkm', '_blank');
+  }
+
+  openResume(): void {
+    window.open('/Resume.pdf', '_blank');
+  }
+
+  openLinkedIn(): void {
+    window.open('https://www.linkedin.com/in/mohantyabinash13092000/', '_blank');
+  } 
 
 }

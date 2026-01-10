@@ -2,7 +2,10 @@
   <div class="header-inner">
 
     <div class="logo">
-      MyPortfolio
+      <span class="status">
+        <span class="dot"></span>
+        Available for opportunities
+      </span>
     </div>
 
     <nav class="nav">
@@ -14,13 +17,26 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="theme-toggle" aria-label="Toggle theme">
-      🌙
+    <button class="theme-toggle" (click)="toggleTheme()">
+      {{ isDarkMode ? '🌙' : '☀️' }}
     </button>
 
-    <button class="hamburger" aria-label="Menu">
+    <button class="hamburger" aria-label="Menu" (click)="toggleMenu()">
       ☰
     </button>
 
   </div>
+
+  <nav
+    class="mobile-nav"
+    *ngIf="isMenuOpen"
+  >
+    <a href="#home" (click)="closeMenu()">Home</a>
+    <a href="#about" (click)="closeMenu()">About</a>
+    <a href="#experience" (click)="closeMenu()">Experience</a>
+    <a href="#projects" (click)="closeMenu()">Projects</a>
+    <a href="#testimonials" (click)="closeMenu()">Testimonials</a>
+    <a href="#contact" (click)="closeMenu()">Contact</a>
+  </nav>
+
 </header>

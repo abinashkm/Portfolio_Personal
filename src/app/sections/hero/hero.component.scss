@@ -1,45 +1,177 @@
 .hero {
   min-height: 100vh;
-  padding-top: 72px; // header height
+  padding-top: 56px; // tighter like reference
+  background: var(--bg-primary);
 }
 
-.actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 1.45rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+
+  align-items: flex-start; 
 }
 
-/* Base button */
-button {
-  padding: 0.75rem 1.75rem;
-  font-size: 0.95rem;
-  border-radius: 10px;
-  cursor: pointer;
+/* ================= LEFT ================= */
+
+.hero-left {
+  padding-top: 4rem; // visual alignment with image top
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.hero-left h1 span {
+  display: block;
+  font-size: 2.8rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  color: var(--text-secondary);
 }
 
-/* Primary button */
+.tech-stack {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+}
+
+.hero-description {
+  margin-top: 2.1rem;
+  max-width: 520px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.hero-actions {
+  margin-top: 5.1rem; // tighter grouping
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-education {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ================= BUTTONS ================= */
+
 .primary-button {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: #ffffff;
+  background: var(--btn-gradient);
+  color: #fff;
   border: none;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
-  }
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-/* Secondary button */
 .secondary-button {
   background: transparent;
-  color: #e5e7eb;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-elevated);
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    transform: translateY(-2px);
+/* ================= RIGHT ================= */
+
+.profile-card {
+  background: var(--bg-secondary);
+  border-radius: 26px; // more rounded like reference
+  padding: 1.6rem;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.67);
+}
+
+/* IMAGE FIX — HEAD SAFE */
+.profile-image {
+  width: 100%;
+  aspect-ratio: auto;      
+  object-fit: cover;
+  object-position: top;   
+  border-radius: 22px;
+}
+
+/* ================= CURRENT FOCUS ================= */
+
+.focus {
+  margin-top: 1rem;
+  padding: 1.3rem 1.5rem;
+
+  background: var(--bg-elevated);
+  border-radius: 22px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.focus h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: var(--text-primary);
+}
+
+.focus ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.focus li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.focus li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .hero-left {
+    padding-top: 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-left h1 span {
+    font-size: 1.55rem;
   }
 }
 
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image {
+    aspect-ratio: 4/5;
+  }
+}
