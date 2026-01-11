@@ -1,1 +1,79 @@
-<p>experience works!</p>
+<section class="experience" id="experience">
+  <div class="experience-inner">
+
+    <!-- Section Heading -->
+    <h2 class="section-title">Experience</h2>
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+      <!-- Timeline line -->
+      <div class="timeline-line"></div>
+
+      <!-- Pulse (animated later via CSS) -->
+      <div class="timeline-pulse"></div>
+
+      <!-- Year markers -->
+      <div class="timeline-years">
+        <span class="year">2023</span>
+        <span class="year">2024</span>
+        <span class="year">2025</span>
+      </div>
+
+    </div>
+
+    <!-- Experience Cards -->
+    <div class="experience-cards">
+
+    <!-- 2023–2024 -->
+    <div
+        class="experience-card"
+        [class.active]="activeIndex === 0"
+    >
+        <div class="card-period">2023 – 2024</div>
+        <h3 class="card-title">Software Engineering Intern</h3>
+        <p class="card-desc">
+        Worked on backend services and internal tooling.
+        </p>
+        <div class="card-tech">
+        Java · Spring Boot
+        </div>
+    </div>
+
+    <!-- 2024–2025 (clickable) -->
+    <div
+        class="experience-card is-clickable"
+        [class.active]="activeIndex === 1"
+        (click)="openModal(1)"
+    >
+        <div class="card-period">2024 – 2025</div>
+        <h3 class="card-title">Software Engineer</h3>
+        <p class="card-desc">
+        Building and maintaining full-stack applications.
+        </p>
+        <div class="card-tech">
+        Java · Spring Boot · Angular · Testing
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Modal (hidden by default, logic later) -->
+    <div class="experience-modal" *ngIf="isModalOpen">
+    <div class="modal-backdrop" (click)="closeModal()"></div>
+
+    <div class="modal-content">
+        <button class="modal-close" (click)="closeModal()">×</button>
+
+        <h3>Software Engineer — 2024–2025</h3>
+        <p>
+        Detailed experience description goes here.
+        Responsibilities, impact, achievements, etc.
+        </p>
+    </div>
+    </div>
+
+
+  </div>
+</section>

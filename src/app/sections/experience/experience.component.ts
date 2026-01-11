@@ -1,11 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit, OnDestroy {
 
+  activeIndex = 0; // 0 = 2023–2024, 1 = 2024–2025
+  isModalOpen = false;
+
+  private intervalId!: number;
+
+  ngOnInit(): void {
+    this.intervalId = window.setInterval(() => {
+      this.activeIndex = this.activeIndex === 0 ? 1 : 0;
+    }, 3000); // syncs with pulse timing
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+  }
+
+  openModal(index: number): void {
+    if (index === 1) {
+      this.isModalOpen = true;
+    }
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
 }
