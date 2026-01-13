@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 export class ExperienceComponent implements OnInit, OnDestroy {
 
   activeIndex = 0; // 0 = 2023–2024, 1 = 2024–2025
-  isModalOpen = false;
 
   private intervalId!: number;
 
@@ -24,13 +23,4 @@ export class ExperienceComponent implements OnInit, OnDestroy {
     clearInterval(this.intervalId);
   }
 
-  openModal(index: number): void {
-    if (index === 1) {
-      this.isModalOpen = true;
-    }
-  }
-
-  closeModal(): void {
-    this.isModalOpen = false;
-  }
 }

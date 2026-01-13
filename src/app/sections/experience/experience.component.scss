@@ -2,7 +2,13 @@
 
 .experience {
   padding: 120px 0;
-  background: var(--bg-primary);
+  background:
+    radial-gradient(
+      900px 420px at 18% 20%,
+      rgba(99, 102, 241, 0.06),
+      transparent 65%
+    ),
+    var(--bg-primary);
 }
 
 .experience-inner {
@@ -88,57 +94,83 @@
   }
 }
 
-
 /* ================= EXPERIENCE CARDS ================= */
 
 .experience-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .experience-card {
   background: var(--bg-secondary);
-  border-radius: 18px;
-  padding: 1.6rem;
+  border-radius: 20px;
+  padding: 1.8rem;
 
   border: 1px solid var(--bg-elevated);
 
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Clickable (recent) card */
-.experience-card.is-clickable {
-  cursor: pointer;
+/* Soften inactive cards slightly */
+.experience-card:not(.active) {
+  opacity: 0.94;
 }
 
 /* ================= CARD CONTENT ================= */
 
-.card-period {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
 .card-title {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.company {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Tech stack row */
+.card-tech {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  color: var(--accent-primary);
+  opacity: 0.9;
+}
+
+/* ================= POINTS CONTAINER (NEW) ================= */
+
+.card-points-wrapper {
+  background: var(--bg-elevated);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card-points {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.card-points li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
   margin-bottom: 0.4rem;
 }
 
-.card-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.8rem;
+.card-points li:last-child {
+  margin-bottom: 0;
 }
 
-.card-tech {
-  font-size: 0.8rem;
-  color: var(--accent-primary);
-}
-
-/* ================= CARD GLOW ANIMATION ================= */
+/* ================= CARD GLOW (ACTIVE ONLY) ================= */
 
 @keyframes card-glow {
   0% {
@@ -146,7 +178,7 @@
   }
 
   50% {
-    box-shadow: 0 0 28px rgba(99, 102, 241, 0.35);
+    box-shadow: 0 0 28px rgba(99, 102, 241, 0.3);
   }
 
   100% {
@@ -156,55 +188,6 @@
 
 .experience-card.active {
   animation: card-glow 3s ease-in-out;
-}
-
-/* Hover emphasis (recent only) */
-.experience-card.is-clickable:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(99, 102, 241, 0.35);
-}
-
-/* ================= MODAL (LAYOUT ONLY) ================= */
-
-.experience-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 300;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  position: relative;
-  z-index: 1;
-
-  background: var(--bg-secondary);
-  border-radius: 20px;
-  padding: 2rem;
-  max-width: 560px;
-  width: 100%;
-
-  color: var(--text-primary);
-}
-
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  cursor: pointer;
 }
 
 /* ================= RESPONSIVE ================= */

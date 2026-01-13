@@ -1,79 +1,73 @@
-<section class="experience" id="experience">
+<section class="experience" id="experiences">
   <div class="experience-inner">
 
-    <!-- Section Heading -->
     <h2 class="section-title">Experience</h2>
 
     <!-- Timeline -->
     <div class="timeline">
-
-      <!-- Timeline line -->
       <div class="timeline-line"></div>
-
-      <!-- Pulse (animated later via CSS) -->
       <div class="timeline-pulse"></div>
 
-      <!-- Year markers -->
       <div class="timeline-years">
         <span class="year">2023</span>
         <span class="year">2024</span>
         <span class="year">2025</span>
       </div>
-
     </div>
 
     <!-- Experience Cards -->
     <div class="experience-cards">
 
-    <!-- 2023–2024 -->
-    <div
+      <!-- Adyogi -->
+      <div
         class="experience-card"
         [class.active]="activeIndex === 0"
-    >
-        <div class="card-period">2023 – 2024</div>
-        <h3 class="card-title">Software Engineering Intern</h3>
-        <p class="card-desc">
-        Worked on backend services and internal tooling.
-        </p>
-        <div class="card-tech">
-        Java · Spring Boot
-        </div>
-    </div>
+      >
 
-    <!-- 2024–2025 (clickable) -->
-    <div
-        class="experience-card is-clickable"
+        <h3 class="card-title">
+          Frontend Developer Intern
+          <span class="company">· Adyogi</span>
+        </h3>
+
+        <div class="card-tech">
+          Junit · Angular · Typescript · Responsive Design · Code Reviews 
+        </div>
+        <div class="card-points-wrapper">
+          <ul class="card-points">
+            <li>Improved web application stability through maintenance and code quality checks.</li>
+            <li>Enhanced mobile experience using responsive design principles.</li>
+            <li>Performed routine code reviews to enforce coding standards.</li>
+            <li>Worked closely with QA to identify and fix defects before release.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fidelity -->
+      <div
+        class="experience-card"
         [class.active]="activeIndex === 1"
-        (click)="openModal(1)"
-    >
-        <div class="card-period">2024 – 2025</div>
-        <h3 class="card-title">Software Engineer</h3>
-        <p class="card-desc">
-        Building and maintaining full-stack applications.
-        </p>
+      >
+
+        <h3 class="card-title">
+          Software Development Engineer
+          <span class="company">· Fidelity Investments</span>
+        </h3>
+
         <div class="card-tech">
-        Java · Spring Boot · Angular · Testing
+          Angular 17 · TypeScript · Java · Reactive Forms · API Integration · Test Automation
         </div>
-    </div>
+        <div class="card-points-wrapper">
+          <ul class="card-points">
+            <li>Developed user-friendly UI components using Angular 17 and TypeScript.</li>
+            <li>Implemented reactive forms for dynamic data handling and validation.</li>
+            <li>Integrated RESTful APIs to fetch and display real-time financial data.</li>
+            <li>Collaborated with QA to create automated tests, improving code reliability.</li>
+          </ul>
+        </div>
+
+      </div>
 
     </div>
-
-
-    <!-- Modal (hidden by default, logic later) -->
-    <div class="experience-modal" *ngIf="isModalOpen">
-    <div class="modal-backdrop" (click)="closeModal()"></div>
-
-    <div class="modal-content">
-        <button class="modal-close" (click)="closeModal()">×</button>
-
-        <h3>Software Engineer — 2024–2025</h3>
-        <p>
-        Detailed experience description goes here.
-        Responsibilities, impact, achievements, etc.
-        </p>
-    </div>
-    </div>
-
 
   </div>
 </section>
