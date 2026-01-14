@@ -42,8 +42,12 @@
 }
 
 .testimonial-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 42px rgba(99, 102, 241, 0.25);
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.5);
+
+    box-shadow:
+      0 22px 48px rgba(0, 0, 0, 0.35),
+      0 0 28px rgba(99, 102, 241, 0.35);
 }
 
 /* ================= TEXT ================= */
