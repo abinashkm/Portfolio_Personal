@@ -12,8 +12,4 @@ export class ProjectsComponent {
     window.open('/rfq-case-study.pdf', '_blank');
   }
 
-  // openEcommerceCaseStudy(): void {
-  //   window.open('/ecommerce-case-study.pdf', '_blank');
-  // }
-
 }

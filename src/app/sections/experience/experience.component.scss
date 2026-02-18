@@ -168,6 +168,73 @@
   margin-bottom: 0;
 }
 
+/* ================= ACHIEVEMENTS ================= */
+
+.achievements {
+  margin-top: 4.5rem;
+}
+
+.achievements-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.achievement-card {
+  background: var(--bg-secondary);
+  border-radius: 18px;
+  padding: 1.6rem;
+
+  border: 1px solid var(--bg-elevated);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.35),
+      0 0 30px rgba(99, 102, 241, 0.18);
+  }
+}
+
+.achievement-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.achievement-sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  margin-bottom: 0.6rem;
+}
+
+.achievement-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= CARD GLOW (ACTIVE ONLY) ================= */
 
 @keyframes card-glow {

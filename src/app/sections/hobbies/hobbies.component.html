@@ -1,0 +1,59 @@
+<section class="hobbies" id="beyond">
+  <div class="hobbies-inner">
+
+    <h2 class="section-title">Beyond Engineering</h2>
+
+    <div class="hobbies-grid">
+
+      <div class="drawings">
+        <h3 class="sub-title">Drawings</h3>
+
+        <div class="media-grid">
+          <img
+            src="/d1.jpeg"
+            alt="Drawing 1"
+            (click)="openImage('/d1.jpeg')"
+          />
+          <img
+            src="/d2.jpeg"
+            alt="Drawing 2"
+            (click)="openImage('/d2.jpeg')"
+          />
+          <img
+            src="/d3.jpeg"
+            alt="Drawing 3"
+            (click)="openImage('/d3.jpeg')"
+          />
+        </div>
+      </div>
+
+      <div class="photography">
+        <h3 class="sub-title">Photography</h3>
+
+        <div class="media-grid">
+          <img
+            src="/p1.jpeg"
+            alt="Photo 1"
+            (click)="openImage('/p1.jpeg')"
+          />
+          <img
+            src="/p2.jpeg"
+            alt="Photo 2"
+            (click)="openImage('/p2.jpeg')"
+          />
+          <img
+            src="/p3.jpeg"
+            alt="Photo 3"
+            (click)="openImage('/p3.jpeg')"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+    <img [src]="selectedImage" class="modal-image" />
+  </div>
+
+</section>
