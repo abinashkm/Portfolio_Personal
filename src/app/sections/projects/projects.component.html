@@ -5,21 +5,68 @@
 
     <div class="projects-grid">
 
-      <!-- Project 1 -->
-      <article class="project-card">
-        <h3 class="project-title">Project Name One</h3>
 
-        <p class="project-description">
-          One-line description explaining the problem solved or system built.
-        </p>
+      <article class="project-card">
+        <h3 class="project-title">Quote Flow : RFQ Management (Backend)</h3>
+          <div class="project-image-wrapper">
+            <img
+              src="/rfq-management.jpeg"
+              alt="RFQ Management System"
+              class="project-image"
+            />
+          </div>
+        <ul class="project-description">
+          <li>Designed a structured quotation workflow for businesses to request, review, and manage vendor bids.</li>
+          <li>Implemented secure authentication and role-based access control for buyers and vendors.</li>
+          <li>Focused on clean layered architecture to ensure scalability and maintainability.</li>
+        </ul>
 
         <div class="project-tech">
-          Java · Spring Boot · REST APIs · PostgreSQL
+          Java · Spring Boot · JWT Authentication · Role-Based Access · REST APIs · JPA · H2 Database
         </div>
 
         <div class="project-links">
           <a
-            href="https://github.com/your-repo"
+            href="https://github.com/abinashkm/Quotationtracker"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn secondary"
+          >
+            GitHub
+          </a>
+
+          <button
+            class="project-btn primary"
+            (click)="openRfqCaseStudy()"
+          >
+            Case Study
+          </button>
+
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3 class="project-title">Soil FDD Reporting (Frontend)</h3>
+          <div class="project-image-wrapper">
+            <img
+              src="/soil-fdd.jpeg"
+              alt="Soil FDD Reporting System"
+              class="project-image"
+            />
+          </div>
+        <ul class="project-description">
+          <li>Built a responsive reporting interface for soil testing and field data visualization.</li>
+          <li>Implemented dynamic form handling and structured report layouts.</li>
+          <li>Focused on UI clarity and CRUD operations for managing field data.</li>
+        </ul>
+
+        <div class="project-tech">
+          Angular · TypeScript · Reactive Forms · CRUD · Component Architecture . Charting Libraries
+        </div>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/abinashkm/FDD-reporting"
             target="_blank"
             rel="noopener noreferrer"
             class="project-btn secondary"
@@ -28,85 +75,94 @@
           </a>
 
           <a
-            href="https://your-live-link-or-case-study"
+            href="https://soil-fdd-reporting.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             class="project-btn primary"
           >
-            Live / Case Study
+            Live Demo
           </a>
         </div>
       </article>
 
-      <!-- Project 2 -->
       <article class="project-card">
-        <h3 class="project-title">Project Name Two</h3>
+        <h3 class="project-title">WorkForce Analytics Dashboard</h3>
+          <div class="project-image-wrapper">
+              <img
+                src="/workforce.jpeg"
+                alt="WorkForce Analytics Dashboard"
+                class="project-image"
+              />
+            </div>
 
-        <p class="project-description">
-          One-line description highlighting architecture, scale, or impact.
-        </p>
+        <ul class="project-description">
+          <li>Developed a workforce data visualization platform for company-level insights.</li>
+          <li>This gives managers a comprehensive view of layoff patterns and burnout metrics.</li>
+          <li>Emphasized clean UI design and intuitive data representation for decision-making.</li>
+        </ul>
 
         <div class="project-tech">
-          Angular · TypeScript · Reactive Forms
+          Angular · TypeScript · Data Visualization · Modular UI · Responsive Design · REST Integration
         </div>
 
         <div class="project-links">
-          <a class="project-btn secondary">GitHub</a>
-          <a class="project-btn primary">Live / Case Study</a>
+          <a
+            href="https://github.com/abinashkm/tech-workflow-analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn secondary"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://6995a2ea2604467dc0b2bfc0--tech-workflow-analytics.netlify.app/workforce"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn primary"
+          >
+            Live Demo
+          </a>
         </div>
       </article>
 
-      <!-- Project 3 -->
       <article class="project-card">
-        <h3 class="project-title">Project Name Three</h3>
-
-        <p class="project-description">
-          Short, outcome-focused explanation of what makes this project valuable.
-        </p>
+        <h3 class="project-title">E-Commerce Backend API</h3>
+          <div class="project-image-wrapper">
+              <img
+                src="/eccomerce.jpeg"
+                alt="E-Commerce Backend API"
+                class="project-image"
+              />
+            </div>
+        <ul class="project-description">
+          <li>Designed RESTful APIs for product management, cart handling, and order processing.</li>
+          <li>Implemented authentication and secure endpoint access.</li>
+          <li>Structured backend using DTO mapping and validation handling.</li>
+        </ul>
 
         <div class="project-tech">
-          API Automation · Karate · SQL
+          Java · Spring Boot · REST APIs · JWT · DTO Pattern · Validation 
         </div>
 
         <div class="project-links">
-          <a class="project-btn secondary">GitHub</a>
-          <a class="project-btn primary">Live / Case Study</a>
-        </div>
-      </article>
+          <a
+            href="https://github.com/abinashkm/ecom-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn secondary"
+          >
+            GitHub
+          </a>
 
-      <!-- Project 4 -->
-      <article class="project-card">
-        <h3 class="project-title">Project Name Four</h3>
-
-        <p class="project-description">
-          One-line description focused on engineering decisions or system design.
-        </p>
-
-        <div class="project-tech">
-          Spring Boot · Microservices · Testing
-        </div>
-
-        <div class="project-links">
-          <a class="project-btn secondary">GitHub</a>
-          <a class="project-btn primary">Live / Case Study</a>
-        </div>
-      </article>
-
-      <!-- Project 5 -->
-      <article class="project-card">
-        <h3 class="project-title">Project Name Five</h3>
-
-        <p class="project-description">
-          Concise description emphasizing learning or problem-solving depth.
-        </p>
-
-        <div class="project-tech">
-          Angular · UI Architecture · Performance
-        </div>
-
-        <div class="project-links">
-          <a class="project-btn secondary">GitHub</a>
-          <a class="project-btn primary">Live / Case Study</a>
+          <a
+            href="/Users/abinashmohanty/Developer/Development/portfolio/public/RFQ MANAGER .pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn primary"
+          >
+            Case Study
+          </a>
         </div>
       </article>
 
@@ -114,4 +170,3 @@
 
   </div>
 </section>
-

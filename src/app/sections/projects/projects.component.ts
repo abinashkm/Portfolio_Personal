@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  openRfqCaseStudy(): void {
+    window.open('/rfq-case-study.pdf', '_blank');
+  }
+
+  // openEcommerceCaseStudy(): void {
+  //   window.open('/ecommerce-case-study.pdf', '_blank');
+  // }
+
 }
