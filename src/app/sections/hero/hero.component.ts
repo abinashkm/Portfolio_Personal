@@ -12,7 +12,7 @@ export class HeroComponent {
   }
 
   openResume(): void {
-    window.open('/Resume.pdf', '_blank');
+    window.open('/resume.pdf', '_blank');
   }
 
   openLinkedIn(): void {
