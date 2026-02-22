@@ -1,6 +1,5 @@
 <section class="experience" id="experiences">
   <div class="experience-inner">
-
     <h2 class="section-title">Experience</h2>
 
     <!-- Timeline -->
@@ -17,71 +16,80 @@
 
     <!-- Experience Cards -->
     <div class="experience-cards">
+      <!-- Fidelity -->
+      <div class="experience-card" [class.active]="activeIndex === 1">
+        <h3 class="card-title">
+          Software Development Engineer · Fidelity Investments
+        </h3>
+        <span class="card-duration">Sept 2024 - Sept 2025</span>
+        <div class="card-tech">
+          Angular 17 · TypeScript · Java · Reactive Forms · API Integration ·
+          Test Automation
+        </div>
+        <div class="card-points-wrapper">
+          <ul class="card-points">
+            <li>
+              Engineered Angular(v17) UI components with shared API services,
+              enabling real-time reporting features and achieving a 50%
+              improvement in component responsiveness; completed project three
+              weeks ahead of schedule.
+            </li>
+            <li>
+              Refined dropdown load performance by 98%, reducing time from 230s
+              to under 5s by optimizing CUSIP fetch size and memory handling,
+              enabling smooth rendering of over 15,000 entries without leaks.
+            </li>
+            <li>
+              Integrated RESTful APIs to fetch and display real-time financial
+              data.
+            </li>
+            <li>
+              Ensured system stability and defect detection rate by 25% by
+              implementing structured negative test cases in automated API
+              validations.
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Adyogi -->
-      <div
-        class="experience-card"
-        [class.active]="activeIndex === 0"
-      >
-
-        <h3 class="card-title">
-          Frontend Developer Intern
-          <span class="company">· Adyogi</span>
-        </h3>
+      <div class="experience-card" [class.active]="activeIndex === 0">
+        <h3 class="card-title">Frontend Developer Intern · Adyogi</h3>
+        <span class="card-duration">Aug 2023 - Nov 2023</span>
 
         <div class="card-tech">
-          Junit · Angular · Typescript · Responsive Design · Code Reviews 
+          Junit · Angular · Typescript · Responsive Design · Code Reviews
         </div>
         <div class="card-points-wrapper">
           <ul class="card-points">
-            <li>Improved web application stability through maintenance and code quality checks.</li>
-            <li>Enhanced mobile experience using responsive design principles.</li>
+            <li>
+              Improved web application stability, reducing system downtimes by
+              15% through effective maintenance.
+            </li>
+            <li>
+              Increased mobile traffic by 30% and decreased bounce rates by 20%
+              by utilizing responsive design principles.
+            </li>
             <li>Performed routine code reviews to enforce coding standards.</li>
-            <li>Worked closely with QA to identify and fix defects before release.</li>
+            <li>
+              Worked closely with QA to identify and fix defects before release.
+            </li>
           </ul>
         </div>
       </div>
-
-      <!-- Fidelity -->
-      <div
-        class="experience-card"
-        [class.active]="activeIndex === 1"
-      >
-
-        <h3 class="card-title">
-          Software Development Engineer
-          <span class="company">· Fidelity Investments</span>
-        </h3>
-
-        <div class="card-tech">
-          Angular 17 · TypeScript · Java · Reactive Forms · API Integration · Test Automation
-        </div>
-        <div class="card-points-wrapper">
-          <ul class="card-points">
-            <li>Developed user-friendly UI components using Angular 17 and TypeScript.</li>
-            <li>Implemented reactive forms for dynamic data handling and validation.</li>
-            <li>Integrated RESTful APIs to fetch and display real-time financial data.</li>
-            <li>Collaborated with QA to create automated tests, improving code reliability.</li>
-          </ul>
-        </div>
-
-      </div>
-
     </div>
 
-     <!-- Achievements -->
+    <!-- Achievements -->
     <div class="achievements">
-
       <h3 class="achievements-title">Achievements & Recognition</h3>
 
       <div class="achievements-grid">
-
         <div class="achievement-card">
           <h4 class="achievement-heading">NASA Space Apps Challenge (2022)</h4>
           <p class="achievement-sub">Top 40 Team</p>
           <p class="achievement-desc">
-            Recognized among the top 40 teams for building a solution
-            during a 48-hour innovation sprint.
+            Recognized among the top 40 teams for building a solution during a
+            48-hour innovation sprint.
           </p>
         </div>
 
@@ -101,13 +109,11 @@
           </h4>
           <p class="achievement-sub">97% Test Coverage Achievement</p>
           <p class="achievement-desc">
-            Contributed to achieving 97% API and UI test coverage,
-            strengthening release reliability and defect detection.
+            Contributed to achieving 97% API and UI test coverage, strengthening
+            release reliability and defect detection.
           </p>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>

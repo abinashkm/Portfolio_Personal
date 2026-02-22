@@ -13,7 +13,7 @@
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3.5rem;
 
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 /* ================= LEFT ================= */
@@ -99,9 +99,9 @@
 /* IMAGE FIX — HEAD SAFE */
 .profile-image {
   width: 100%;
-  aspect-ratio: auto;      
+  aspect-ratio: auto;
   object-fit: cover;
-  object-position: top;   
+  object-position: top;
   border-radius: 22px;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .focus li::before {
-  content: '•';
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--accent-primary);
@@ -164,11 +164,51 @@
   .hero-left h1 span {
     font-size: 1.55rem;
   }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .hero-actions {
+    margin-top: 2.2rem;
+    gap: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+    margin-top: 1.4rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero-left {
+    padding-top: 1rem;
+  }
+
   .hero-left h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .hero-left h1 span {
+    font-size: 1.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .profile-card {
+    padding: 1.1rem;
   }
 
   .profile-image {
