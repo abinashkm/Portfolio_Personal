@@ -1,13 +1,14 @@
-<!-- section is html element that defines a generic section of a document.
-  it is a semantic tag meaning it adds meaning to the content it wraps, improving accessibility and SEO -->
 <section class="hero" id="home">
   <div class="hero-inner">
 
-    <!-- LEFT -->
     <div class="hero-left">
 
+      <div class="hero-badge">
+        FULL-STACK ENGINEER · 1.4 YEARS EXPERIENCE
+      </div>
+
       <h1>
-        Hi, I’m Abinash<br />
+        Hi, I’m Abinash
         <span>Full-stack Software Engineer</span>
       </h1>
 
@@ -16,61 +17,26 @@
       </div>
 
       <p class="hero-description">
-        Turning ideas into reliable software solutions with clean code and 
-        robust testing practices.
-      </p>
-
-      <p class="hero-education">
-        B.Tech in Computer Science (AI & ML), 2024 · CGPA 8.72
+        Building scalable full-stack systems with Angular, Spring Boot,
+        and performance-focused engineering.
       </p>
 
       <div class="hero-actions">
-        <button
-          class="primary-button"
-          (click)="openGitHub()"
-        >
-          GitHub
-        </button>
 
-        <button
-          class="secondary-button"
-          (click)="openResume()"
-        >
+        <button class="secondary-button" (click)="openResume()">
           View Resume
         </button>
 
-        <button
-          class="primary-button"
-          (click)="openLinkedIn()"
-        >
+        <button class="primary-button" (click)="openGitHub()">
+          GitHub
+        </button>
+
+        <button class="primary-button" (click)="openLinkedIn()">
           LinkedIn
         </button>
-        
-      </div>
-
-    </div>
-
-    <!-- RIGHT -->
-    <div class="hero-right">
-      <div class="profile-card">
-
-        <img
-          src="/pic02.jpeg"
-          alt="Abinash profile photo"
-          class="profile-image"
-        />
-
-        <div class="focus">
-          <h4>Current Focus</h4>
-          <ul>
-            <li>Full-stack development</li>
-            <li>REST API design</li>
-            <li>Testing</li>
-            <li>Clean architecture</li>
-          </ul>
-        </div>
 
       </div>
+
     </div>
 
   </div>

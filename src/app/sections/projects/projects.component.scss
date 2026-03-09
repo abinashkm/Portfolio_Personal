@@ -1,6 +1,9 @@
-
 .projects {
   background: var(--bg-primary);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .projects-inner {
@@ -9,8 +12,6 @@
   padding: 0 24px;
 }
 
- 
-
 .projects .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -18,15 +19,13 @@
   margin-bottom: 3.5rem;
 }
 
- 
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
 }
 
- 
+/* ================= CARD ================= */
 
 .project-card {
   background: var(--bg-secondary);
@@ -38,10 +37,11 @@
   display: flex;
   flex-direction: column;
 
+  min-width: 0; /* prevents flex/grid overflow */
+
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
- 
 @media (hover: hover) {
   .project-card:hover {
     transform: translateY(-4px);
@@ -53,7 +53,7 @@
   }
 }
 
- 
+/* ================= TEXT ================= */
 
 .project-title {
   font-size: 1.1rem;
@@ -62,91 +62,6 @@
   margin-bottom: 0.35rem;
 }
 
-.project-description {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 1rem;
-}
-
- 
-.project-tech {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-
-  color: var(--accent-primary);
-  opacity: 0.9;
-
-  margin-bottom: 1.4rem;
-}
-
- 
-
-.project-links {
-  margin-top: auto;
-
-  display: flex;
-  justify-content: center;   
-  align-items: center;
-
-  gap: 2rem;
-}
-
- 
-.project-btn {
-  font-size: 0.9rem;      
-  font-weight: 500;
-
-  padding: 10px 18px;    
-  border-radius: 999px;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  transition: all 0.25s ease;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 120px;       
-}
-
- 
-.project-btn.secondary {
-  color: var(--text-primary);
-  border: 1px solid var(--bg-elevated);
-  background: transparent;
-}
-
-.project-btn.secondary:hover {
-  background: var(--bg-elevated);
-}
-
- 
-.project-btn.primary {
-  color: var(--accent-primary);
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  background: rgba(99, 102, 241, 0.08);
-}
-
-.project-btn.primary:hover {
-  background: rgba(99, 102, 241, 0.15);
-}
- 
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
- 
-.projects-grid > .project-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: 520px;
-  margin: 0 auto;
-}
- 
 .project-description {
   padding-left: 1rem;
   margin-bottom: 1rem;
@@ -158,12 +73,76 @@
 .project-description li {
   margin-bottom: 0.4rem;
 }
- 
+
+.project-tech {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  color: var(--accent-primary);
+  opacity: 0.9;
+
+  margin-bottom: 1.4rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.project-links {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.project-btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 120px;
+}
+
+.project-btn.secondary {
+  color: var(--text-primary);
+  border: 1px solid var(--bg-elevated);
+  background: transparent;
+}
+
+.project-btn.secondary:hover {
+  background: var(--bg-elevated);
+}
+
+.project-btn.primary {
+  color: var(--accent-primary);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.project-btn.primary:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
 .project-btn.disabled {
   opacity: 0.6;
   cursor: default;
   pointer-events: none;
 }
+
+/* ================= IMAGE ================= */
 
 .project-image-wrapper {
   margin: 1rem 0 1.4rem 0;
@@ -174,15 +153,53 @@
 
 .project-image {
   width: 100%;
-  aspect-ratio: 16 / 9;    
-  object-fit: cover;       
-  object-position: center;  
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
 
   display: block;
   transition: transform 0.5s ease;
 }
 
-  
 .project-card:hover .project-image {
   transform: scale(1.04);
+}
+
+/* ================= GRID RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= CENTER LAST CARD ================= */
+
+.projects-grid > .project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ================= MOBILE FIXES ================= */
+
+@media (max-width: 480px) {
+
+  .projects-inner {
+    padding: 0 18px;
+  }
+
+  .project-card {
+    padding: 1.2rem; 
+  }
+
+  .project-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .project-btn {
+    min-width: 100px;
+  }
+
 }
